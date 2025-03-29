@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salami</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="px-3 bg-slate-200">
+    <div id="money-container"></div>
+    <section class="max-w-md min-h-screen mx-auto py-6 ">
+        <header>
+            <nav class="flex justify-between items-center">
+                <img class="w-16" src="assets/Group.png" alt="">
+                <div>
+                    <h1 class="text-3xl text-center font-mono">৳ <span id="main-balance">0</span></h1>
+                    <p>Your Balance</p>
+                </div>
+                <button id="logout-btn" class="btn">Logout</button>
+            </nav>
+            <section class="mt-10">
+                <h1 class="text-center text-2xl font-bold mb-2">Salami niye nao 🤑</h1>
+                <div class="">
+                    <!-- <img src="assets/taka.jpg" alt=""> -->
+                </div>
+
+                <section id="addmoney">
+                    <div class="">
+                        <div class="hero-content flex-col lg:flex-row-reverse px-0">
+                            <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                                <div class="card-body">
+                                    <legend>Select Bank</legend>
+                                    <select id="allbank" class="select">
+                                        <option disabled selected>Select Bank</option>
+                                        <option value="BKash">BKash</option>
+                                        <option value="Nagad">Nagad</option>
+                                        <option value="DBBL">DBBL</option>
+                                    </select>
+                                    <fieldset class="fieldset">
+                                        <label class="fieldset-label">Account number</label>
+                                        <input value="01301301312" id="account-number" type="number" class="input"
+                                            placeholder="Type your number" required />
+                                        <label class="fieldset-label">Amount</label>
+                                        <input id="amount" type="number" class="input" placeholder="Type your amount"
+                                            required />
+                                        <label class="fieldset-label">PIN: Enter 1234 👇</label>
+                                        <input id="pin" type="text" class="input"
+                                            placeholder="Type your PIN" required />
+                                        
+                                        <button id="add-money" type="submit"
+                                            class="btn border-none btn-neutral bg-blue-600 mt-4">Add Money</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </header>
+    </section>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
